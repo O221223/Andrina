@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Food Recipes - Homepage</title>
+        <style>
+
+        body {
+            background-image: url('pictures/spices\ background.jpg');
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            background-position: center center; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: beige;
+            color: white;
+            padding: 20px 10px;
+            text-align: left;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+        .welcome-message {
+        text-align: center;
+        font-size: 1em;
+        color: #010101;  
+        margin-top: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav a {
+            color: rgb(241, 238, 238);
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 4px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://example.com/hero-image.jpg') no-repeat center center/cover;
+            color: white;
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .recipe-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+        .recipe-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .recipe-card h3 {
+            margin: 15px 10px 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .recipe-card p {
+            margin: 0 10px 15px;
+            color: #666;
+            font-size: 1em;
+        }
+        section {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .introduction {
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            margin: 20px 0;
+        }
+        iframe {
+            border: 0;
+            width: 100%;
+            height: 300px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    
+            <div class="welcome-message">
+                <h1>Welcome to Flavorful finds <h1>
+                <h2><p class="introduction">""Welcome to Flavorful finds Embark on a flavorful journey filled with delicious recipes, expert cooking tips, and creative ideas to transform your kitchen into a culinary paradise."</p>
+                    
+        </div>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Your Culinary Adventure Awaits</h2>
+        <p>Explore a treasure trove of mouthwatering recipes, sharpen your culinary skills, and embrace the joy of cooking. Together, let’s transform every dish into a work of art!</p>
+
+    </section>
+
+<!-- Recipe Section -->
+<section id="recipes" class="recipes">
+    <div class="recipe-card" onclick="showRecipe('garlic-butter-shrimp')">
+        <img src="pictures/garlic butter shirmp.jpg" alt="Garlic Butter Shrimp">
+        <h3>Garlic Butter Shrimp</h3>
+        <p>Succulent shrimp cooked in a rich, buttery garlic sauce, perfect as an appetizer or main dish.</p>
+    </div>
+    <div class="recipe-card" onclick="showRecipe('baked-salmon-with-lemon')">
+        <img src="pictures/baked salmon.jpg" alt="Baked Salmon with Lemon">
+        <h3>Baked Salmon with Lemon</h3>
+        <p>Tender salmon fillets baked with a bright and zesty lemon glaze for a healthy and delicious meal.</p>
+    </div>
+    <div class="recipe-card" onclick="showRecipe('seafood-paella')">
+        <img src="pictures/seafood paella.jpg" alt="Seafood Paella">
+        <h3>Seafood Paella</h3>
+        <p>A classic Spanish dish with saffron-infused rice, mussels, shrimp, and clams, brimming with flavor.</p>
+    </div>
+    <div class="recipe-card" onclick="showRecipe('grilled-mahi-mahi-with-mango-salsa')">
+        <img src="pictures/grilled mahi mahi.jpg" alt="Grilled Mahi Mahi with Mango Salsa">
+        <h3>Grilled Mahi Mahi with Mango Salsa</h3>
+        <p>Perfectly grilled mahi mahi topped with a fresh, tangy mango salsa for a tropical twist.</p>
+    </div>
+    <div class="recipe-card" onclick="showRecipe('cioppino')">
+        <img src="pictures/cioppino.jpg" alt="Cioppino">
+        <h3>Cioppino</h3>
+        <p>A hearty Italian-American seafood stew with shrimp, clams, mussels, and fish in a rich tomato broth.</p>
+    </div>
+</section>
+
+<!-- Modal -->
+<div id="recipeModal" class="modal">
+    <div class="modal-content">
+        <button class="close" onclick="closeModal()">&times;</button>
+        <h3 id="recipeTitle"></h3>
+        <ul id="recipeSteps"></ul>
+    </div>
+</div>
+
+<script>
+      // Recipe data
+const recipes = {
+    'garlic-butter-shrimp': {
+        title: 'Garlic Butter Shrimp',
+        steps: [
+            'Heat butter in a skillet over medium heat.',
+            'Add minced garlic and sauté until fragrant.',
+            'Toss in the shrimp, season with salt and pepper, and cook until pink.',
+            'Garnish with parsley and serve immediately.'
+        ]
+    },
+    'baked-salmon-with-lemon': {
+        title: 'Baked Salmon with Lemon',
+        steps: [
+            'Preheat oven to 375°F (190°C).',
+            'Place salmon fillets on a baking tray lined with parchment paper.',
+            'Drizzle with olive oil and sprinkle with salt, pepper, and lemon slices.',
+            'Bake for 15-20 minutes until the salmon is flaky and cooked through.'
+        ]
+    },
+    'seafood-paella': {
+        title: 'Seafood Paella',
+        steps: [
+            'Heat olive oil in a large pan and sauté onions, garlic, and bell peppers.',
+            'Add rice, saffron, and broth, stirring to combine.',
+            'Layer shrimp, mussels, and clams on top of the rice.',
+            'Cover and cook until the seafood is done and the rice is tender.',
+            'Garnish with fresh parsley and lemon wedges.'
+        ]
+    },
+    'grilled-mahi-mahi-with-mango-salsa': {
+        title: 'Grilled Mahi Mahi with Mango Salsa',
+        steps: [
+            'Preheat grill to medium-high heat.',
+            'Season mahi mahi fillets with salt, pepper, and olive oil.',
+            'Grill for 4-5 minutes on each side until cooked through.',
+            'Top with freshly made mango salsa and serve.'
+        ]
+    },
+    'cioppino': {
+        title: 'Cioppino',
+        steps: [
+            'Heat olive oil in a large pot and sauté onions, garlic, and celery.',
+            'Add crushed tomatoes, white wine, and seafood stock.',
+            'Bring to a simmer and add shrimp, clams, mussels, and fish.',
+            'Cook until the seafood is done and the flavors meld together.',
+            'Serve hot with crusty bread.'
+        ]
+    }
+};
+
+
+    // Function to show recipe
+    function showRecipe(recipeKey) {
+        const recipe = recipes[recipeKey];
+        if (recipe) {
+            document.getElementById('recipeTitle').innerText = recipe.title;
+            const stepsList = document.getElementById('recipeSteps');
+            stepsList.innerHTML = '';
+            recipe.steps.forEach(step => {
+                const li = document.createElement('li');
+                li.innerText = step;
+                stepsList.appendChild(li);
+            });
+            document.getElementById('recipeModal').style.display = 'flex';
+        }
+    }
+
+    // Function to close modal
+    function closeModal() {
+        document.getElementById('recipeModal').style.display = 'none';
+    }
+</script>
+
+<!-- CSS -->
+<style>
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
+    }
+    .modal-content {
+        background: white;
+        margin: 15% auto;
+        padding: 20px;
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+        text-align: center;
+    }
+    .close {
+        color: black;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+
+
+<!-- CSS -->
+<style>
+    /* Recipe Cards */
+    #recipes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+        padding: 16px;
+    }
+    .recipe-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .recipe-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    .recipe-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Modal */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
+        align-items: center;
+        justify-content: center;
+        animation: fadeIn 0.3s ease-out;
+    }
+    .modal-content {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    .close {
+        background: none;
+        border: none;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+    
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+     <!-- Header Section -->
+     
+     <header>
+
+        <div class="welcome-message">
+                <h1>Welcome to Flavorful finds </h1> 
+            
+            </div>
+        </div>
+       
+ </header>
+
+ <section id="about">
+    <p class="introduction">"Welcome to Flavorful finds Where flavors come alive and cooking becomes an adventure. Dive into a world of mouthwatering recipes, practical cooking tips, and endless inspiration for your kitchen creations."</p>
+    <h2>Our Purpose</h2>
+    <p>At Flavorful finds, our goal is to empower everyone to embrace the joy of cooking. We offer a diverse collection of recipes that cater to all skill levels, helping you create memorable dishes and bring loved ones closer through the magic of food.</p>
+    <h2>About the Developer</h2>
+    <p>Hi there! I’m Andrina Reyes, the creator of this website. With a deep passion for both technology and culinary arts, I designed Mariel's Culinary Haven as a platform to combine my love for web development and cooking. Leveraging my expertise in HTML, CSS, JavaScript, and design, I strive to deliver a seamless and inspiring user experience. Thank you for visiting, and happy cooking!</p>
+</section>
+    <footer>
+        <p>Created by Andrina Reyes</p>
+    <div class="social-media">
+        <a href="https://www.facebook.com/anirdna.reyes" target="_blank">
+            <img src="pictures/facebook icon.jpg" alt="Facebook" width="30" height="30">
+        </a>
+        
+    </div>
+</footer>
+     
+    </footer>
+    </section>
+
+    <!-- Contact Us Section -->
+    <header>
+            <div class="welcome-message">
+                    <h1>Welcome to Flavorful finds </h1>
+                
+                </div>
+            </div>
+           
+    </header>
+    <section id="contact">
+        <p class="introduction">"Welcome to our Contact Us page! We value your feedback, questions, and suggestions, and we're here to ensure you have a seamless experience connecting with us."</p>
+        <h2>Contact Methods</h2>
+        <p>Email: pr7857646@gmail.com</p>
+        <p>Phone: +639154124356</p>
+        <p>Social Media Links:</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/anirdna.reyes" target="_blank">
+                <img src="pictures/facebook icon.jpg" alt="Facebook" width="30" height="30">
+            </a>
+            
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3836.7570220389166!2d120.34903977495188!3d15.921795384736544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339145d16fcc8e79%3A0x821208c424536ac3!2sBinalatongan%20Community%20College!5e0!3m2!1sen!2sph!4v1737338830877!5m2!1sen!2sph" 
+            width="800" 
+            height="600" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    
+    
+    </section>
+    <footer>
+        <p>Email: reyesandrina309@gmail.com</p>
+        <p>Phone: +639664365202</p>
+    <div class="social-media">
+        <a href="https://www.facebook.com/anirdna.reyes" target="_blank">
+            <img src="pictures/facebook icon.jpg" alt="Facebook" width="30" height="30">
+        </a>
+       
+        
+    </div>
+</footer>
+     
+    </footer>
+    </section>
+
+    
+</body>
+</html>
